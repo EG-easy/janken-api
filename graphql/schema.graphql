@@ -43,7 +43,9 @@ type Offer {
   offerorHands: [Int!],
   offereeHands: [Int!],
   drawPoint: Int,
-  winner: String
+  winner: String,
+  offeror: String,
+  offeree: String,
 }
 
 ##################################### INPUT ##########################################

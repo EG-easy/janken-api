@@ -8,6 +8,16 @@ class OfferResponse {
     return this
   }
 
+  setOfferor (offeror) {
+    this.offeror = offeror
+    return this
+  }
+
+  setOfferee (offeree) {
+    this.offeree = offeree
+    return this
+  }
+
   setOfferorNFT (nft) {
     this.offerorNFT = nft
     return this

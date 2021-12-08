@@ -215,7 +215,8 @@ class ApiService {
         .setOffereeHands(JSON.parse(offer.offereeHands))
         .setDrawPoint(offer.drawPoint)
         .setWinner(offer.winner)
-
+        .setOfferor(offer.offeror)
+        .setOfferee(offer.offeree)
       offerResponse.push(res)
     }
 
