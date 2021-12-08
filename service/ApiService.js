@@ -128,10 +128,11 @@ class ApiService {
     // check offerId
     await this.orm.checkIfOfferIDIsUnique(id)
 
-    await this.jankenExecutor.queryOffer(id)
-      .catch((e) => {
-        throw new Error(`failed to query ofer id: ${e}`)
-      })
+    const response = await this.jankenExecutor.queryOffer(id)
+
+    if (response === '') {
+      throw new Error('failed to query offer id, offer is not exsit')
+    }
 
     // // save to DB
     await this.orm.postOffer(args)
