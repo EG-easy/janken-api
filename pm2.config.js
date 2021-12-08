@@ -14,7 +14,10 @@ module.exports = {
     },
     {
       name: 'Watch NFT Owner',
-      script: './cmd/watch.js'
+      script: './cmd/watch.js',
+      env: {
+        NODE_ENV: 'production'
+      }
     }
   ]
 }
