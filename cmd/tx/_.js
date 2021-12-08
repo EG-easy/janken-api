@@ -2,6 +2,7 @@
 
 const acceptOffer = require('./accept_offer')
 const approve = require('./approve')
+const betToken = require('./bet_token')
 const declineOffer = require('./decline_offer')
 const generateViewingKey = require('./generate_viewing_key')
 const makeOffer = require('./make_offer')
@@ -35,6 +36,13 @@ function makeTxCommand () {
     .action((tokenId) => {
       console.log('===tx approve===')
       approve(tokenId).catch((e) => { console.log(e) })
+    })
+
+  tx
+    .command('bet_token')
+    .action(() => {
+      console.log('===tx bet_token===')
+      betToken().catch((e) => { console.log(e) })
     })
 
   tx
