@@ -19,7 +19,7 @@ class Executor {
    * @param {String} contractName
    */
 
-  async deploy (wasmPATH, initMsg, contractName) {
+  async deploy (wasmPATH, initMsg, contractName, token = null) {
     const wasm = fs.readFileSync(wasmPATH)
     console.log('Uploading contract')
     const uploadReceipt = await this.client.upload(wasm, {}).catch((err) => {
@@ -33,7 +33,9 @@ class Executor {
     const contract = await this.client.instantiate(
       codeId,
       initMsg,
-      contractName
+      contractName,
+      'memo',
+      token
     )
       .catch((err) => {
         throw new Error(`Could not instantiate contract: ${err}`)
@@ -48,8 +50,13 @@ class Executor {
    * execute
    * @param {Object} handleMsg
    */
-  async execute (handleMsg) {
-    const response = await this.client.execute(this.contractAddress, handleMsg)
+  async execute (handleMsg, token = null) {
+    const response = await this.client.execute(
+      this.contractAddress,
+      handleMsg,
+      'memo',
+      token
+    )
       .catch((e) => { throw new Error(`fail to execute Msg: ${e}`) })
     console.log('res:', response)
     return response

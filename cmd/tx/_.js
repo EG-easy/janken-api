@@ -40,9 +40,10 @@ function makeTxCommand () {
 
   tx
     .command('bet_token')
-    .action(() => {
+    .argument('<bet id>', 'bet id', myParseInt)
+    .action((id) => {
       console.log('===tx bet_token===')
-      betToken().catch((e) => { console.log(e) })
+      betToken(id).catch((e) => { console.log(e) })
     })
 
   tx
