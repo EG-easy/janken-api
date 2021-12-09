@@ -14,16 +14,20 @@ const betToken = async (id) => {
 
   const executor = new Executor(client, contractAddress)
 
+  const betToken = [{
+    denom: 'uscrt',
+    amount: '1000000'
+  }]
+
   const handleMsg = {
     bet_token: {
-      denom: 'uscrt',
-      amount: 1000,
+      id: id,
       hand: 1,
       entropy: 'aaaaa'
     }
   }
   console.log(JSON.stringify(handleMsg))
-  const response = await executor.execute(handleMsg)
+  const response = await executor.execute(handleMsg, betToken)
   console.log('response: ', JSON.stringify(response))
 }
 
