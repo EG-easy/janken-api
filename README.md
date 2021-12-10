@@ -1,5 +1,5 @@
 # Janken-API
-Helper backend service to improve UX for Secret Janken Game. [janken-front](https://github.com/tak1827/secret-janken-front) interacts with [janken-contract](https://github.com/tak1827/secret-janken-contract) and stores its information to RDB through janken-api.
+Helper backend service to improve UX for Secret Janken Game. [secret-janken-front](https://github.com/tak1827/secret-janken-front) interacts with [secret-janken-contract](https://github.com/tak1827/secret-janken-contract) and stores its information to RDB through janken-api.
 
 ## System Architecture
 <p align="center">
