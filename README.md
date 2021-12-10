@@ -1,5 +1,5 @@
 # Janken-API
-Helper backend service to improve UX for Secret Janken Game. [janken-front](https://github.com/tak1827/janken-front) interacts with [janken-contract](https://github.com/tak1827/janken-contract) and stores its information to RDB through janken-api.
+Helper backend service to improve UX for Secret Janken Game. [janken-front](https://github.com/tak1827/secret-janken-front) interacts with [janken-contract](https://github.com/tak1827/secret-janken-contract) and stores its information to RDB through janken-api.
 
 ## System Architecture
 <p align="center">
@@ -43,5 +43,5 @@ node cmd/cmd.js tx bet_token
 ```
 
 ### reference
-- [janken-contract](https://github.com/tak1827/janken-contract) CosmWasm Janken contract for Secrete Netork.
-- [janken-front](https://github.com/tak1827/janken-front) Frontend implementation for Secret Janken Game.
+- [secret-janken-contract](https://github.com/tak1827/secret-janken-contract) CosmWasm Janken contract for Secrete Netork.
+- [secret-janken-front](https://github.com/tak1827/secret-janken-front) Frontend implementation for Secret Janken Game.
