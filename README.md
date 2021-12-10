@@ -1,14 +1,14 @@
-# Janken-API
-Helper backend service to improve UX for Secret Janken Game. [secret-janken-front](https://github.com/tak1827/secret-janken-front) interacts with [secret-janken-contract](https://github.com/tak1827/secret-janken-contract) and stores its information to RDB through janken-api.
+# Secret-Janken-API
+Helper backend service to improve UX for Secret Janken Game. [secret-janken-front](https://github.com/tak1827/secret-janken-front) interacts with [secret-janken-contract](https://github.com/tak1827/secret-janken-contract) and stores its information to RDB through secret-janken-api.
 
 ## System Architecture
 <p align="center">
   <img src="./architechture.png" width="600">
 </p>
 
-- janken-api reserves metadata of SNIP721
-- janken-api synchronizes the status of offers retrieved from the contract
-- janken-api watches the contract and rewrites the DB values in case of any changes in the owner of SNIP721
+- secret-janken-api reserves metadata of SNIP721
+- secret-janken-api synchronizes the status of offers retrieved from the contract
+- secret-janken-api watches the contract and rewrites the DB values in case of any changes in the owner of SNIP721
 
 ## Interact with CLI (Optional useful tools for development)
 - deploy contract
